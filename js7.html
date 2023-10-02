@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Task 7</title>
+    <style>
+      div#output {
+        height: 50px;
+        width: 50px;
+        padding-top: 50px;
+        position: relative;
+        animation: mymove 3.5s infinite;
+        animation-play-state: paused;
+      }
+
+      h1 {
+        color: rgb(43, 25, 123);
+      }
+
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="output">
+      <img height="200px" src="./train.png" />
+    </div>
+    <div class="container" style="padding-top: 200px">
+      <center>
+        <h1>Click the following button to handle animation</h1>
+        <button style="height: 25px; width: 70px" onclick="starting()">
+          Start
+        </button>
+        <button style="height: 25px; width: 70px" onclick="stopping() ">
+          Stop
+        </button>
+      </center>
+    </div>
+
+    <script>
+      function starting() {
+        document.getElementById("output").style.animationPlayState = "running";
+      }
+
+      function stopping() {
+        document.getElementById("output").style.animationPlayState = "paused";
+      }
+    </script>
+  </body>
+</html>

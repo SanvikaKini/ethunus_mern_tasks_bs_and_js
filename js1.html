@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Task 1</title>
+  </head>
+  <body>
+    <script>
+      function reverseFunction(num) {
+        let digits = Array.from(String(num), Number);
+        let reversedArray = digits.reduce((acc, digit) => [digit, ...acc], []);
+        return parseInt(reversedArray.join(""));
+      }
+
+      let num = prompt("Enter the number of your choice");
+      document.write("Number you have enterd: " + num + "<br>");
+      console.log("Number you have enterd: " + num + "<br>");
+      let reversedNum = reverseFunction(num);
+      document.write("Number after reversing: " + reversedNum);
+      console.log("Number after reversing: " + reversedNum);
+    </script>
+  </body>
+</html>

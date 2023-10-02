@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Task 2</title>
+  </head>
+  <body>
+    <script>
+      function alphaOrder(str) {
+        var arr = str.split("");
+        arr.sort();
+        var sortedStr = arr.join("");
+        return sortedStr;
+      }
+
+      let name = prompt("Enter the string of your choice");
+      document.write("String you have enterd: " + name + "<br>");
+      console.log("String you have enterd: " + name + "<br>");
+      let alphaOrderString = alphaOrder(name);
+      document.write("String in alphabetical order: " + alphaOrderString);
+      console.log("String in alphabetical order: " + alphaOrderString);
+    </script>
+  </body>
+</html>
